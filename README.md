@@ -1,32 +1,32 @@
-# 11 Express.js: Note Taker
+# Megan's Note Taker
 
-## Your Task
+## App Description
 
 This application is called Note Taker which is an app that can be used to write and save notes. This application uses an Express.js back end and will save and retrieve note data from a JSON file. The app can also delete notes.
 
 ## User Story
 
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organise my thoughts and keep track of tasks I need to complete
+AS A small business owner<br>
+I WANT to be able to write and save notes<br>
+SO THAT I can organise my thoughts and keep track of tasks I need to complete<br>
 
 ## Acceptance Criteria
 
-GIVEN a note-taking application
-WHEN you open the Note Taker
-THEN you are presented with a landing page with a link to a notes page
-WHEN you click on the link to the notes page
-THEN you are presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN you enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN you click on the Save icon
-THEN the new note you have entered is saved and appears in the left-hand column with the other existing notes
-WHEN you click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN you click on the Write icon in the navigation at the top of the page
-THEN you am presented with empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN you click on the Trash can icon
-THEN your previous notes are deleted
+GIVEN a note-taking application<br>
+WHEN you open the Note Taker<br>
+THEN you are presented with a landing page with a link to a notes page<br>
+WHEN you click on the link to the notes page<br>
+THEN you are presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column<br>
+WHEN you enter a new note title and the note’s text<br>
+THEN a Save icon appears in the navigation at the top of the page<br>
+WHEN you click on the Save icon<br>
+THEN the new note you have entered is saved and appears in the left-hand column with the other existing notes<br>
+WHEN you click on an existing note in the list in the left-hand column<br>
+THEN that note appears in the right-hand column<br>
+WHEN you click on the Write icon in the navigation at the top of the page<br>
+THEN you am presented with empty fields to enter a new note title and the note’s text in the right-hand column<br>
+WHEN you click on the Trash can icon<br>
+THEN your previous notes are deleted<br>
 
 ## Mock-Up
 
@@ -38,7 +38,7 @@ The following images show the web application's appearance and functionality:
 
 ## URL of the app
 
-* The URL of the functional, deployed application:
+* The URL of the functional, deployed application: https://megansnotetaker.herokuapp.com/notes
 * The URL of the GitHub repository: https://github.com/mskippen/11-02-Note-Taker.git
 
 ## Creator contact details

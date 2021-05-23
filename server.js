@@ -2,16 +2,19 @@ const bodyParser = require("body-parser");
 const express = require("express")
 const path = require("path")
 const { v4: uuidv4 } = require('uuid');
-const fs = require("fs")
+const fs = require("fs");
 
 const app = express()
 app.use(express.json())
 app.use(express.static("public"))
 
-const data = fs.readFileSync("./db/db.json", (err) => {
-    if(err) throw err;
-})
-const parsedData = JSON.parse(data)
+function getData() {
+    const data = fs.readFileSync("./db/db.json", (err) => {
+        if(err) throw err;
+    })
+    const parsedData = JSON.parse(data)
+    return parsedData
+}
 
 //HTML ROUTES/
 app.get("/", (req, res) => {
@@ -33,16 +36,18 @@ app.post("/api/notes", (req, res) => {
         title: req.body.title,
         text: req.body.text
     }
-    parsedData.push(requestBody)
-    console.log(parsedData)
-    fs.writeFile("./db/db.json", JSON.stringify(parsedData), (err) => {
+    const data = getData()
+    data.push(requestBody)
+    console.log(data)
+    fs.writeFile("./db/db.json", JSON.stringify(data), (err) => {
         if(err) throw err;
     })
     res.json(parsedData)
 })
 
 app.delete("/api/notes/:id", (req, res) => {
-    const filteredData = parsedData.filter(item => item.id != req.params.id)
+    const data = getData()
+    const filteredData = data.filter(item => item.id != req.params.id)
     fs.writeFile("./db/db.json", JSON.stringify(filteredData), (err) => {
         if(err) throw err;
     })
